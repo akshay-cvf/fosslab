@@ -1,0 +1,24 @@
+Advanced Packaging Tool (APT) commands
+install   - $apt-get install package-name(s)// s=package name
+uninstall - $apt-get remove package-name(s)
+update    - $apt-get update
+upgrade   - $apt-get upgrade
+list all installed packages - $apt-cache pkgnames
+
+Aptitude
+update    - $aptitude update
+install   - $aptitude install
+uninstall - $aptitude remove
+
+dpkg
+    dpkg -i package-file-name.deb - Installs a .deb file.
+    dpkg --list search-pattern - Lists packages currently installed on the system.
+    dpkg --configure package-name(s) - Runs a configuration interface to set up a package.
+    dpkg-reconfigure package-name(s) - Runs a configuration interface on an already
+				       installed package.
+
+yum
+install   - 	$yum install package-name(s)
+uninstall -	$yum erase package-name(s)
+update    - 	$yum update optional-package-name(s)
+upgrade   - 	$yum upgrade

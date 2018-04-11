@@ -1,0 +1,32 @@
+#=$
+step 1:download the latest kernel (4.16 is the latest version)
+# wget https://www.kernel.org/pub/linux/kernel/v3.x/linux-4.16.tar.xz
+ 
+step 2:
+untar or decompress it using
+# tar -xvJf linux-4.16.tar.xz
+
+step 3:
+to configure the newly downloaded kernel use
+# cd linux-3.9.3 // to go to the untared file
+
+# make menuconfig
+a text based user interface will appear with default settings
+if it doesnt appear install the following package 
+$apt-get install ${libncurses}
+$apt-get install ${libncurses-devel}
+
+step 4:
+make neccessory changes or save with default settings 
+step 5:
+compile the kernel
+$ make //for compiling main kernel
+$ make modules //for compiling kernel modules
+$ make modules_install //install modules
+step 6:
+$make install //install new kernel
+step 7:reboot
+the kernel is added as the default boot
+boot it
+step 8:check the version using
+$ uname -r
